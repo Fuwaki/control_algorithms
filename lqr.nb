@@ -1,0 +1,190 @@
+(* Content-type: application/vnd.wolfram.cdf.text *)
+
+(*** Wolfram CDF File ***)
+(* http://www.wolfram.com/cdf *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*************************************************************************)
+(*                                                                       *)
+(*                                                                       *)
+(*  This file was created under the Wolfram Enterprise licensing terms.  *)
+(*                                                                       *)
+(*       For additional information concerning CDF licensing see:        *)
+(*                                                                       *)
+(*        www.wolfram.com/cdf/adopting-cdf/licensing-options.html        *)
+(*                                                                       *)
+(*                                                                       *)
+(*                                                                       *)
+(*************************************************************************)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[      1060,         20]
+NotebookDataLength[      6022,        169]
+NotebookOptionsPosition[      6197,        163]
+NotebookOutlinePosition[      6688,        181]
+CellTagsIndexPosition[      6645,        178]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.961451688413157*^9, 3.961451688415166*^9}},
+ CellLabel->
+  "In[317]:=",ExpressionUUID->"aa096f8c-ad93-4180-a546-07ad9cea517a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "}"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"(", GridBox[{
+        {"0", "0"},
+        {"1", "0"}
+       }], ")"}], ",", 
+     RowBox[{"(", GridBox[{
+        {"1"},
+        {"0"}
+       }], ")"}], ",", 
+     RowBox[{"(", GridBox[{
+        {"1", "0"},
+        {"0", "1"}
+       }], ")"}], ",", 
+     RowBox[{"(", GridBox[{
+        {"0"},
+        {"0"}
+       }], ")"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ssm", "=", 
+  RowBox[{"StateSpaceModel", "[", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "}"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.961451701792754*^9, 3.961451794896299*^9}, {
+  3.961452009767356*^9, 3.961452053330263*^9}, {3.9614529683327627`*^9, 
+  3.961453014233864*^9}, {3.9614541262936487`*^9, 3.961454128767468*^9}, {
+  3.961460971399328*^9, 3.961461000211722*^9}, {3.961461183655817*^9, 
+  3.961461220886943*^9}, {3.961461501882354*^9, 3.961461521375135*^9}},
+ CellLabel->
+  "In[558]:=",ExpressionUUID->"180d0481-c162-48fd-b5f8-29e2a860f134"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"q", ",", " ", "r"}], "}"}], " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"(", GridBox[{
+        {"1", "0"},
+        {"0", "100"}
+       }], ")"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"{", "10", "}"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sspec", "=", 
+    RowBox[{"<|", 
+     RowBox[{
+      RowBox[{"\"\<InputModel\>\"", "->", "ssm"}], ",", 
+      RowBox[{"\"\<FeedbackInputs\>\"", "->", "1"}]}], "|>"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+  "(*", "\:8ba1\:7b97LQR\:589e\:76ca", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"K", "=", 
+   RowBox[{
+    RowBox[{"LQRegulatorGains", "[", 
+     RowBox[{"sspec", ",", 
+      RowBox[{"{", 
+       RowBox[{"q", ",", "r"}], "}"}]}], "]"}], "//", "N"}]}], "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"K", "=", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{"1.0", ",", "200.0"}], "}"}], "}"}]}], ";"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"closedSys", "=", 
+   RowBox[{"SystemsModelStateFeedbackConnect", "[", 
+    RowBox[{"ssm", ",", "K"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9614518053543377`*^9, 3.961451951545548*^9}, {
+   3.961452171032959*^9, 3.961452185917038*^9}, {3.9614523833117523`*^9, 
+   3.961452406047542*^9}, {3.961452494490665*^9, 3.961452494931386*^9}, {
+   3.9614525779354677`*^9, 3.961452580986211*^9}, {3.961452638787133*^9, 
+   3.961452706298286*^9}, 3.961453001145339*^9, 3.961453039477536*^9, {
+   3.961453644879476*^9, 3.9614536608387012`*^9}, {3.961460835025649*^9, 
+   3.961460836798139*^9}, {3.961461046520409*^9, 3.9614611520935593`*^9}, 
+   3.961461652185781*^9, {3.961461966963855*^9, 3.961462003198038*^9}, {
+   3.961462148717986*^9, 3.961462227587193*^9}, {3.96146232584769*^9, 
+   3.961462476861342*^9}, {3.9614625075744534`*^9, 3.9614625447909307`*^9}},
+ CellLabel->
+  "In[839]:=",ExpressionUUID->"c0f69b2b-819a-4ccc-9621-c236ff27356a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"x0", "=", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", 
+      RowBox[{"-", "10"}]}], "}"}]}], ";"}], " ", 
+  RowBox[{"(*", "\:521d\:59cb\:72b6\:6001", "*)"}], "\n", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"OutputResponse", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"closedSys", ",", "x0"}], "}"}], ",", "0", ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", "20"}], "}"}]}], "]"}], ";"}], "\n", 
+ RowBox[{"Plot", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "20"}], "}"}], ",", 
+   RowBox[{"PlotRange", "->", "All"}], ",", 
+   RowBox[{"PlotLegends", "->", 
+    RowBox[{"{", 
+     RowBox[{"Velocity", ",", "Displacement"}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9614535446057167`*^9, 3.961453576038591*^9}, 
+   3.961453628113646*^9, {3.961453693193729*^9, 3.961453705433803*^9}, {
+   3.961454145738998*^9, 3.9614542288927593`*^9}, {3.9614605653086357`*^9, 
+   3.961460567094112*^9}, {3.9614606270281057`*^9, 3.961460627324685*^9}, {
+   3.9614607477987013`*^9, 3.961460761219561*^9}, 3.961461163938076*^9, {
+   3.961461534358654*^9, 3.961461596951173*^9}, 3.9614619555824337`*^9, {
+   3.961462234897089*^9, 3.961462242637032*^9}},
+ CellLabel->
+  "In[843]:=",ExpressionUUID->"1181a784-6a69-46e4-a89c-c629f391d524"]
+},
+WindowSize->{1234.5, 733.5},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowStatusArea->"",
+TaggingRules-><|"SlideshowSettings" -> <|"Toolbar" -> True|>|>,
+FrontEndVersion->"14.1 for Linux x86 (64-bit) (2024\:5e747\:670816\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ba628a8b-86ed-49f7-93f1-6c16d7117f9c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[1460, 33, 225, 4, 44, "Input",ExpressionUUID->"aa096f8c-ad93-4180-a546-07ad9cea517a"],
+Cell[1688, 39, 1115, 33, 78, "Input",ExpressionUUID->"180d0481-c162-48fd-b5f8-29e2a860f134"],
+Cell[2806, 74, 2038, 53, 195, "Input",ExpressionUUID->"c0f69b2b-819a-4ccc-9621-c236ff27356a"],
+Cell[4847, 129, 1346, 32, 141, "Input",ExpressionUUID->"1181a784-6a69-46e4-a89c-c629f391d524"]
+}
+]
+*)
+
